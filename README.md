@@ -11,7 +11,7 @@ yarn start
 
 ## Run with local version of Ray
 
-Because [Hooks don't work with yarn link](https://github.com/facebook/react/issues/14257) and yarn link is useful tool. I've created a script to link ray library to this project:
+Because [Hooks don't work with yarn link](https://github.com/facebook/react/issues/14257) and yarn link is useful tool, I've created a script to link ray library to this project:
 
 ```bash
 chmod +x ./link_ray
