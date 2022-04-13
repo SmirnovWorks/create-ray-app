@@ -5,7 +5,7 @@ YOUR_PROJECT="$PWD"
 echo "$PACKAGE_YOU_DEBUG_LOCALLY, $YOUR_PROJECT"
 
 cd $PACKAGE_YOU_DEBUG_LOCALLY
-ls
+
 yarn link
 yarn install
 yarn build:ray:prod
