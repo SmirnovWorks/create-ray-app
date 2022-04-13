@@ -1,0 +1,26 @@
+#!/bin/sh
+PACKAGE_YOU_DEBUG_LOCALLY="$1"
+YOUR_PROJECT="$PWD"
+
+echo "$PACKAGE_YOU_DEBUG_LOCALLY, $YOUR_PROJECT"
+
+cd $PACKAGE_YOU_DEBUG_LOCALLY
+ls
+yarn link
+yarn install
+yarn build:ray:prod
+
+cd node_modules/react
+yarn link
+
+cd ../react-dom
+yarn link
+
+cd $YOUR_PROJECT
+yarn link @wework/ray2
+yarn link react
+yarn link react-dom
+yarn install
+
+
+
